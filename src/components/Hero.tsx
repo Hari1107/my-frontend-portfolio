@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Code } from "lucide-react";
+import { Mail, Github, Linkedin, Code, Download } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -12,22 +12,32 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
             HARIHARAN K
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-4">
+          <p className="text-xl md:text-2xl text-primary mb-4">
             Junior Software Engineer @ CronLabs Solutions
           </p>
-          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Building scalable web applications with Django, Angular, and modern web technologies.
             Passionate about creating efficient, user-centric solutions.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center mb-8">
             <Button 
+              variant="default" 
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              asChild
+            >
+              <a href="/K_HARIHARAN_Jr_SWE_@cronLabs_resume.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
+            </Button>
+            <Button 
               variant="secondary" 
               size="lg"
-              className="bg-white text-primary hover:bg-white/90"
               asChild
             >
               <a href="#contact">
@@ -38,7 +48,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-white text-white hover:bg-white/10"
+              className="border-primary text-primary hover:bg-primary/10"
               asChild
             >
               <a href="#projects">
@@ -49,26 +59,26 @@ const Hero = () => {
           
           <div className="flex gap-6 justify-center">
             <a 
-              href="https://github.com/hariharan1107" 
+              href="https://github.com/Hari1107" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-primary/80 hover:text-primary transition-colors"
             >
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="https://linkedin.com/in/hariharan-k1107" 
+              href="https://www.linkedin.com/in/hariharan-k-developer" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-primary/80 hover:text-primary transition-colors"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="https://leetcode.com/hariharan1107" 
+              href="https://leetcode.com/u/Harik1107/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-primary/80 hover:text-primary transition-colors"
             >
               <Code className="h-6 w-6" />
             </a>
