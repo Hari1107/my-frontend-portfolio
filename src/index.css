@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 100% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 50%;
+    --primary: 200 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 100% 45%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 160 100% 45%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 195 100% 40%;
+    --accent: 280 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 210 100% 50%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 200 100% 50%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --hero-gradient-start: 210 100% 50%;
-    --hero-gradient-end: 195 100% 45%;
-    --tech-blue: 210 100% 50%;
-    --tech-cyan: 195 100% 45%;
-    --dark-bg: 222 47% 11%;
-    --section-bg: 0 0% 100%;
+    --hero-gradient-start: 0 0% 0%;
+    --hero-gradient-end: 200 100% 10%;
+    --tech-blue: 200 100% 50%;
+    --tech-cyan: 180 100% 45%;
+    --dark-bg: 0 0% 7%;
+    --section-bg: 0 0% 10%;
     
     /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(210 100% 50% / 0.2);
-    --shadow-hover: 0 20px 40px -15px hsl(210 100% 50% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(200 100% 50% / 0.3);
+    --shadow-hover: 0 20px 40px -15px hsl(200 100% 50% / 0.4);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,7 +103,16 @@ All colors MUST be HSL.
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+    background: linear-gradient(135deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 10%) 50%, hsl(200, 100%, 10%) 100%);
+    position: relative;
+  }
+  
+  .gradient-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, hsl(200, 100%, 20% / 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, hsl(280, 100%, 30% / 0.2) 0%, transparent 50%);
   }
   
   .gradient-text {

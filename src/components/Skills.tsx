@@ -1,38 +1,73 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code2, Wrench, Database, Layers } from "lucide-react";
+import { Code2, Wrench, Database, Layers, Globe, Server } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
       icon: Code2,
       title: "Programming Languages",
-      skills: ["Java", "Python", "JavaScript"],
+      skills: [
+        { name: "Java", icon: "☕" },
+        { name: "Python", icon: "🐍" },
+        { name: "JavaScript", icon: "⚡" }
+      ],
       color: "text-primary"
     },
     {
-      icon: Layers,
-      title: "Web Technologies & Frameworks",
-      skills: ["Django Rest Framework", "Angular v16", "HTML", "CSS"],
+      icon: Globe,
+      title: "Web Technologies",
+      skills: [
+        { name: "HTML", icon: "🌐" },
+        { name: "CSS", icon: "🎨" },
+        { name: "Angular v16", icon: "🅰️" },
+        { name: "React", icon: "⚛️" }
+      ],
       color: "text-secondary"
     },
     {
-      icon: Wrench,
-      title: "IDEs & Tools",
-      skills: ["VS Code", "BitBucket", "Git", "GitHub", "Postman", "Android Studio"],
+      icon: Server,
+      title: "Backend & APIs",
+      skills: [
+        { name: "Django REST Framework", icon: "🎯" },
+        { name: "FastAPI", icon: "⚡" },
+        { name: "WebSocket", icon: "🔌" },
+        { name: "API Design", icon: "🔗" }
+      ],
       color: "text-accent"
     },
     {
       icon: Database,
       title: "Database",
-      skills: ["SQL", "Firebase", "MySQL Workbench"],
+      skills: [
+        { name: "SQL", icon: "💾" },
+        { name: "Firebase", icon: "🔥" },
+        { name: "MySQL", icon: "🗄️" }
+      ],
       color: "text-primary"
     },
     {
-      icon: Code2,
-      title: "Additional Skills",
-      skills: ["API Design", "UI Design", "WebSocket", "FastAPI", "Technical Documentation"],
+      icon: Wrench,
+      title: "Tools & DevOps",
+      skills: [
+        { name: "VS Code", icon: "💻" },
+        { name: "Git", icon: "📦" },
+        { name: "GitHub", icon: "🐙" },
+        { name: "BitBucket", icon: "🪣" },
+        { name: "Postman", icon: "📮" },
+        { name: "Android Studio", icon: "📱" }
+      ],
       color: "text-secondary"
+    },
+    {
+      icon: Layers,
+      title: "Additional Skills",
+      skills: [
+        { name: "UI Design", icon: "🎨" },
+        { name: "Technical Documentation", icon: "📝" },
+        { name: "Problem Solving", icon: "🧩" }
+      ],
+      color: "text-accent"
     }
   ];
 
@@ -61,9 +96,10 @@ const Skills = () => {
                     <Badge 
                       key={idx} 
                       variant="secondary"
-                      className="text-sm"
+                      className="text-sm flex items-center gap-1.5"
                     >
-                      {skill}
+                      <span className="text-base">{skill.icon}</span>
+                      {skill.name}
                     </Badge>
                   ))}
                 </div>

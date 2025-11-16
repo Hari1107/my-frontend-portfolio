@@ -67,7 +67,7 @@ const Contact = () => {
                     asChild
                   >
                     <a 
-                      href="https://github.com/hariharan1107" 
+                      href="https://github.com/Hari1107" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-3"
@@ -83,7 +83,7 @@ const Contact = () => {
                     asChild
                   >
                     <a 
-                      href="https://linkedin.com/in/hariharan-k1107" 
+                      href="https://www.linkedin.com/in/hariharan-k-developer" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-3"
@@ -99,7 +99,7 @@ const Contact = () => {
                     asChild
                   >
                     <a 
-                      href="https://leetcode.com/hariharan1107" 
+                      href="https://leetcode.com/u/Harik1107/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-3"
