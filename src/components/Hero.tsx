@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin, Code, Download } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const Hero = () => {
   return (
@@ -11,19 +13,32 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
-            HARIHARAN K
-          </h1>
-          <p className="text-xl md:text-2xl text-primary mb-4">
-            Junior Software Engineer @ CronLabs Solutions
-          </p>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Building scalable web applications with Django, Angular, and modern web technologies.
-            Passionate about creating efficient, user-centric solutions.
-          </p>
+        <div className="max-w-5xl mx-auto animate-fade-in">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-8">
+            {/* Profile Photo */}
+            <div className="flex-shrink-0">
+              <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-primary shadow-elegant">
+                <AvatarImage src={profilePhoto} alt="Hariharan K" />
+                <AvatarFallback>HK</AvatarFallback>
+              </Avatar>
+            </div>
+            
+            {/* Text Content */}
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4">
+                HARIHARAN K
+              </h1>
+              <p className="text-xl md:text-2xl text-primary mb-3">
+                Junior Software Engineer @ CronLabs Solutions
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground mb-6">
+                Building scalable web applications with Django, Angular, and modern web technologies.
+                Passionate about creating efficient, user-centric solutions.
+              </p>
+            </div>
+          </div>
           
-          <div className="flex flex-wrap gap-4 justify-center mb-8">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
             <Button 
               variant="default" 
               size="lg"
@@ -57,7 +72,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-6 justify-center md:justify-start">
             <a 
               href="https://github.com/Hari1107" 
               target="_blank" 
