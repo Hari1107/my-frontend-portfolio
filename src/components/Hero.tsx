@@ -29,11 +29,10 @@ const Hero = () => {
                 HARIHARAN K
               </h1>
               <p className="text-xl md:text-2xl text-primary mb-3">
-                Junior Software Engineer @ CronLabs Solutions
+                Software Engineer @ CronLabs Solutions
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-6">
-                Building scalable web applications with Django, Angular, and modern web technologies.
-                Passionate about creating efficient, user-centric solutions.
+                Crafting meaningful products through clean code and smart design.
               </p>
             </div>
           </div>
